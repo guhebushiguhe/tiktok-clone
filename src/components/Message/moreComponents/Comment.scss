@@ -1,0 +1,100 @@
+.CommentListContainer {
+  width: 100%;
+  height: 100%;
+  background-color:  #161824;
+  .CommentListTitle {
+    width: 100%;
+    height: 10vh;
+    background-color: #161824;
+    display: flex;
+    border-bottom: 1px solid #323232;
+    button {
+      flex: 4.5;
+      border: none;
+      outline: none;
+      background-color: #161824;
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: #161824;
+        color: #ffff;
+        margin-left: -250px;
+      }
+    }
+    span {
+      flex: 6;
+      line-height: 10vh;
+      text-align: left;
+      color: #fff;
+      font-weight: 600;
+      font-size: 35px;
+    }
+  } 
+  .CommentList {
+    background-color: #161722;
+    ul {
+        display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      li.CommentListItem {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+        div {
+          width: 88px;
+          height: 88px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+        span {
+          margin-right: 20px;
+          color: #ffff;
+          width: 400px;
+          font-size: 30px;
+          padding: 15px;
+          font-weight: 600;
+          p {
+            width: 400px;
+            color: #ffffff;
+            font-size: 20px;
+            padding-top: 9px;
+            text-align: left;
+            margin-bottom: 15px;
+            font-weight: 400;
+          }
+          .times{
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            padding-top: 100px;
+            color: #cccc;
+            font-weight: normal;
+        }
+        }
+
+        .poto{
+            width: 140px;
+            height: 140px;
+            margin-left: 50px;
+            // padding-left: 20px;
+            
+        }
+  
+      }
+  
+      .bottom{
+        text-align: center;
+        font-size: 26px;
+        color: #999999;
+        padding-top: 100px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+    
+}

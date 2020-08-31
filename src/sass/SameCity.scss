@@ -1,0 +1,308 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul,li{
+    list-style: none;
+}
+.sameCityBox{
+    background: #171925;
+    height: 90vh;
+    overflow: scroll;
+}
+.headerCity{
+    width: 100vw;
+    height: 8vh;
+    background:#161824 ;
+    border-bottom: 1px solid #252935;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    z-index: 1;
+    transition:top .5s;
+}
+.headerCity.hideNav{
+    top: -8vh;
+}
+
+.headerCity h3{
+    line-height: 10vh;
+    text-align: center;
+    color: #fff;
+   
+}
+.content{
+    width: 100vw;
+    height: 100%;
+    background: #171925;
+    padding-top: 8vh;
+    
+    // overflow:auto;
+}
+.con-box{
+    overflow:auto;
+}
+.contentMap{
+    display: flex;
+    justify-content: space-between;
+}
+.contentMapLeft{
+    padding: 10px 30px;
+}
+.contentMapLeft span{
+    font-size: 28px;
+    color: #7d8e9a;
+}
+.contentMapRight{
+    padding: 10px 30px;
+}
+.contentMapRight span:nth-child(1){
+    font-size: 28px;
+    padding: 0px 10px;
+    color: #7d8e9a;
+}
+.contentMapRight span:nth-child(2){
+    font-size: 28px;
+    color: #7d8e9a;
+}
+.contentVideo{
+    width: 100vw;
+    // height: 50vh;
+    // display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 0;
+}
+.boxLeft{
+    width: 49.5vw;
+    // height: 40vh;
+    // border: 1px solid #7d8e9a;
+    // margin-bottom: 5px;
+   
+    
+   
+}
+// .boxSmall{
+//     height: 35vh;
+// }
+.box1{
+    // width: 100%;
+    // height: 100%;
+    // border: 1px solid #7d8e9a;
+    position: relative;
+    
+}
+
+
+.videoPlay{
+    width: 100%;
+    // height: 100%;
+}
+.someCityTitle{
+  color: #fff;
+  position:absolute;
+  bottom: 50px;
+  left: 100px;
+  font-size: 28px;
+
+}
+.headerImg{
+    position: absolute;
+    bottom: 35px;
+    left:10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.QieHuan{
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    top: 100vh;
+    transition: top .2s;
+    z-index: 999;
+    overflow:auto;
+    background: #0e0f19;
+    
+}
+.active{
+    position: flex;
+    top: 0;
+    left: 0;
+    
+    
+}
+.qieHuAnHeader{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+
+}
+.qieHuAnHeaderTitle1{
+    color: #fff;
+    // margin-left: 60px;
+    font-size: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 3;
+}
+.qieHuAnHeaderTitle2{
+    color: #fff;
+    // margin-left: 30%;
+    margin: 0 auto;
+    font-size: 40px;
+}
+.qieHuAnMap{
+    width: 100vw;
+    height: 12vh;
+    background: #13141e;
+}
+.qieHuAnMap span{
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+    margin: 30px 30px;
+}
+.qieHuAnMap p{
+    color: #bcbdbd;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.qieHuAnCity{
+    width: 100vw;
+    height: 40vh;
+    background:#13141e ;
+    margin-top: 20px;
+    color: #bcbdbd;
+    // display: flex;
+    
+   
+}
+.qieHuAnCityRemen{
+    width: 100vw;
+    height: 8vh;
+    color: #fff;
+    display: flex;
+
+}
+.qieHuAnCityRemen p{
+    font-size: 28px;
+    margin-top: 30px;
+}
+.qieHuAnCitys{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+}
+.qieHuAnCityTitle{
+    width: 210px;
+    height: 60px;
+   background: #20222b;
+   line-height: 60px;
+   font-size: 30px;
+   text-align: center;
+   margin:10px 10px;
+   border: 1px solid #20222b;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    fill: currentColor;
+    display: block;
+    margin:20px 30px;
+    line-height: 10vh;
+}
+.citysName{
+    background: #0e0f19;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.citysCity{
+    background: #13141e;
+    font-size: 30px;
+    padding: 20px 5px;
+}
+.cityList{
+     width:40px;
+     height: 380px;
+     
+     background: #0e0f19;
+     text-align: center;
+    
+}
+.cityListTitle{
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+}
+.startList{
+    position: relative;
+}
+.activeTop{
+    position: fixed; 
+    right: 0px;
+    top: 50%;
+    transform:translateY(-50%);
+    
+}
+.input{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 30px;
+}
+.visition{
+  width: 100vw;
+  height: 200vh;
+  margin: auto;
+  color: #a5a6a7;
+ 
+
+  background: #0e0f19;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 333;
+}
+.visition li{
+  width: 100%;
+  border-bottom: 1px solid #ccc ;
+  padding: 15px 0px;
+}
+ 
+.parents{
+    // box-sizing: border-box;
+    // border: 1px solid blue;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.CityVideoPlayer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #1a1b20;
+    z-index: 10;
+    position: absolute;
+    bottom: -100vh;
+    left: 0;
+    transition: bottom 0.4s;
+}
+.CityVideoPlayer.show{
+    bottom: -10vh;
+}

@@ -1,0 +1,44 @@
+.big-box {
+  height: 100%;
+  .con-box {
+    height: 90%;
+  }
+
+  .tab {
+    height: 10%;
+    background-color: #1a1b20;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: #fff;
+      font-weight: bold;
+      span {
+        font-size: 40px;
+        padding: 10px 0;
+        color: #ccc;
+      }
+    }
+    .center-button-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      .center-button {
+        width: 100px;
+        height: 70px;
+        background-color: #fff;
+      }
+    }
+    a.tab-active span {
+      color: #fff;
+      border-bottom: 10px solid #fff;
+    }
+  }
+}

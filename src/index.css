@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 36px;
+  font-family: "Arial Negreta", "Arial Normal", "Arial";
+  /* touch-action: none; */
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}

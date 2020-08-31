@@ -1,0 +1,105 @@
+.homeWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  // box-sizing: border-box;
+  // border: 3px solid red;
+  background: #1a1b20;
+  // scroll-snap-type: y mandatory;
+  .iconfont.icon-quanping {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    font-size: 60px;
+    color: #ccc;
+    text-align: center;
+  }
+  .noMoreBoxTop {
+    width: 400px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: #aaa;
+    font-size: 20px;
+  }
+  .noMoreBoxBottom {
+    width: 400px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: #aaa;
+    font-size: 20px;
+  }
+  .appVideos {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 90vh;
+    // overflow: scroll;
+    overflow: hidden;
+    width: 100vw;
+    scroll-snap-type: y mandatory;
+
+    .customerHomeBox {
+      position: relative;
+      width: 100vw;
+      height: 90vh;
+      box-sizing: border-box;
+      // border: 3px solid red;
+      overflow: auto;
+    }
+  }
+
+  .commentsWrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+
+    z-index: 1;
+    transition: top 0.4s;
+    .exitArea {
+      width: 100vw;
+      height: 40vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      // box-sizing: border-box;
+      // border: 1px solid blue;
+      // background: rgba(0, 0, 255, 0.178);
+    }
+    .commentsHomeBox {
+      width: 100vw;
+      height: 60vh;
+      position: absolute;
+      bottom: 10vh;
+      left: 0;
+      // z-index: 5;
+    }
+  }
+  .commentsWrap.showComment {
+    top: 0;
+  }
+  /* Chrome, Safari and Opera 隐藏scrollbar */
+  .appVideos::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* IE, Edge and Firefox 隐藏scrollbar*/
+  .appVideos {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

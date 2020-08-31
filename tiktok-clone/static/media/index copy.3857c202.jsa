@@ -1,0 +1,163 @@
+import React, { Component } from "react";
+import { Fun1, Fun2 } from "../../store/homeStore/action";
+import { connect } from "react-redux";
+import {withRouter} from "react-router-dom"
+import "../../sass/BottomTab.scss";
+import "../../sass/Home.scss"
+import Video from "./moreComponents/Video"
+
+// react-slidepage 相关,滑动全屏
+import { SlideContainer, SlidePage } from 'react-slidepage';
+require('react-slidepage/lib/index.css');
+
+class index extends Component {
+  constructor(){
+    super()
+    this.initPage = 1 // 初始化显示页
+    this.state={
+      prePage: 0, // 当前页索引(从1开始)
+      nextPage: 0,  // 滑动到下一页索引(从1开始)
+      curPage: this.initPage, // 当前要显示的页面
+      couldSlidePage: true,  // 是否允许全屏上下滑动
+      videoList:[
+        {
+          vid: "001",
+          videoSrc: '509251085d0a14f444f39b4304fb9ac2.mp4',
+          upId: "LLB8689",
+          upName: "小水先生",
+          upAva: "ava001.svg",
+          position: "北京",
+          describe: "一年的杯子要退货",
+          musicDescribe: "小水先生的原声音乐",
+          liked: false,
+          likeCount: 66987,
+          commentCount: 7889,
+          shareCount: 7889,
+        },
+        {
+          vid: "002",
+          videoSrc: 'b678bc42bf745b1d874e5e92697767cb.mp4',
+          upId: "944513900",
+          upName: "体育解说王涛",
+          upAva: "ava002.jpeg",
+          position: "深圳",
+          describe: "史上最爆笑的担架失误都在这里",
+          musicDescribe: "搞笑背景音乐",
+          liked: false,
+          likeCount: 43587,
+          commentCount: 4423,
+          shareCount: 3201,
+        },
+        {
+          vid: "003",
+          videoSrc: '943a1c58ddc7ef0cfdd66e1614b7c41d.mp4',
+          upId: "dyz12mb2szug",
+          upName: "最强蜗牛官方",
+          upAva: "ava003.jpeg",
+          position: "深圳",
+          describe: "脑洞打开的养成游戏",
+          musicDescribe: "最强蜗牛的原声音乐",
+          liked: false,
+          likeCount: 125412,
+          commentCount: 14421,
+          shareCount: 15488,
+        },
+      ],
+    }
+  }
+  componentDidMount(){
+
+  }
+  // 全屏滑动回调,设置 上一页 下一页
+  onAfter(origin, direction, target) {
+    // console.log("暂停:"+origin+"播放:"+target)
+    this.setState({
+      prePage: origin,
+      nextPage: target,
+    })
+  }
+  // 设置是否可以全屏滑动
+  setSlidable=(pageIndex)=>{
+    this.setState({
+      couldSlidePage:!this.state.couldSlidePage,
+      curPage:pageIndex+1
+    },()=>{
+      console.log("couldSlidePage:"+this.state.couldSlidePage)
+    })
+  }
+  // 设置关注
+  handleLike=(id)=>{
+    this.state.videoList.forEach(({upId,liked},index)=>{
+      if(upId===id){
+        let newVideoList = [...this.state.videoList]
+        newVideoList[index].liked=!liked
+        this.setState({
+          videoList:newVideoList
+        })
+      }
+    })
+  }
+  render() {
+    let {prePage,nextPage,curPage,couldSlidePage} = this.state
+    return (
+    <div className="homeWrap">
+      <div className="appVideos">
+        <SlideContainer after={this.onAfter.bind(this)} page={curPage} useWheel={couldSlidePage?true:false} useSwipe={couldSlidePage?true:false}>
+          {this.state.videoList.map(({vid,videoSrc,upId,upName,upAva,position,describe,musicDescribe,liked,likeCount,commentCount,shareCount},index)=>{
+            if(!couldSlidePage && (index+1)!==curPage)return
+            return(
+              <SlidePage key={vid} className="transition">            
+                <Video
+                key={vid}
+                vid={vid}
+                videoSrc={videoSrc}
+                upId={upId}
+                upName={upName}
+                upAva={upAva}
+                position={position}
+                describe={describe}
+                musicDescribe={musicDescribe}
+                liked={liked}
+                likeCount={likeCount}
+                commentCount={commentCount}
+                shareCount={shareCount}
+                prePage={prePage}
+                nextPage={nextPage}
+                refStr={"video"+(index+1)}
+                handleLike={this.handleLike}
+                curPage={curPage}
+                setSlidable={this.setSlidable}
+                pageIndex={index}
+                ></Video>
+              </SlidePage>
+            )
+          }
+          )}
+        </SlideContainer>
+      </div>
+    </div>
+    )
+  }
+}
+function mapStateToProps(store) {
+  return {
+    // 示例
+    value: store.homeReducer.value,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    // 示例
+    fun1: () => {
+      dispatch(Fun1);
+    },
+    fun2: () => {
+      dispatch(Fun2);
+    },
+  };
+}
+
+const Home = connect(mapStateToProps, mapDispatchToProps)(index);
+
+export default withRouter(Home);

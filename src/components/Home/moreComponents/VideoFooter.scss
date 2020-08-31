@@ -1,0 +1,85 @@
+@keyframes marquee {
+  0% {
+      -webkit-transform: translate3d(350px, 0, 0);
+      transform: translate3d(350px, 0, 0);
+  }
+  100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      display: none;
+  }
+}
+
+.videoFooter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 190px;
+    // border: 1px solid #000;
+    .footerContainer {
+        padding: 0 10px;
+        color: #fff;
+        .positionBox {
+            height: 50px;
+            line-height: 50px;
+          .iconfont {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #5cd37f;
+            border-radius: 10px;
+            vertical-align: middle;
+            font-size: 24px;
+            text-align: center;
+            line-height: 40px;
+          }
+      
+          .position {
+            margin-left: 10px;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.4);
+          }
+        }
+      
+        .upId {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 50px
+      
+        }
+      
+        .describe {
+            font-size: 24px;
+            line-height: 40px;
+            width: 600px;
+            height: 44px;
+            overflow: hidden;
+      
+        }
+        .musicDescribeImg{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+        }
+        .musicDescribeBox{
+          display: inline-block;
+          overflow: hidden;
+          width: 350px;
+          height: 40px;
+          .musicDescribe {
+            display: inline-block;
+            height: 40px;
+              font-size: 24px;
+              line-height: 40px;
+              -webkit-animation: marquee 10s linear infinite;
+              animation: marquee 10s linear infinite;
+
+
+          }
+        }
+      }
+}
+

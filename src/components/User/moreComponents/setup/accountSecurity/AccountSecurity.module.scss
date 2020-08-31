@@ -1,0 +1,66 @@
+.account {
+  background:#151824;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  color:#dddedf;
+  .accountHeader {
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .iconBox{
+      padding:20px;
+      height: 100%;
+      position: absolute;
+      display:flex;
+      align-items: center;
+      .iconcolor {
+        color:#dddedf;
+        font-size: 40px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+      color:#dddedf;
+      font-size: 32px;
+    }
+  }
+  .con{
+    overflow: auto;
+    height: 90%;
+    width: 100vw;
+    padding:0 30px;
+    .itemBox{
+      margin-top: 30px;
+      width: 100%;
+      height:100px;
+      display: flex;
+      justify-content: space-between;
+      .accountItemLeft{
+        flex:1;
+        .leftTit{
+          font-size: 32px;
+        }
+        p{
+          margin-top:20px;
+          font-size: 25px;
+          color:#6c6f76;
+        }
+      }
+      .accountItemRight{
+        color: #6c6f76;
+        span{
+          font-size:30px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

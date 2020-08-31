@@ -1,0 +1,108 @@
+.FansList {
+  width: 100%;
+  height: 100%;
+  background-color: #161824;
+  .FansListTitle {
+    width: 100%;
+    height: 10vh;
+    background-color: #161824;
+    display: flex;
+    border: 1px solid #323232;
+    button {
+      flex: 4.5;
+      border: none;
+      outline: none;
+      background-color: #161824;
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: #161824;
+        color: #ffff;
+        margin-left: -250px;
+      }
+    }
+    span {
+      flex: 6;
+      line-height: 10vh;
+      text-align: left;
+      color: #fff;
+      font-weight: 600;
+      font-size: 35px;
+    }
+  }
+  .FansListed {
+    background-color: #161722;
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      .FansListedItem {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        div {
+          width: 88px;
+          height: 88px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+        span {
+          margin-right: 20px;
+          color: #ffff;
+          width: 150px;
+          font-size: 28px;
+          padding-top: 15px;
+          p {
+            width: 150px;
+            color: #ccc;
+            font-size: 20px;
+            padding-top: 9px;
+            text-align: left;
+          }
+        }
+        .times {
+          width: 200px;
+          height: 10vh;
+          line-height: 10vh;
+          font-size: 10px;
+          color: #dddddd;
+        }
+        .Focus {
+          width: 160px;
+          height: 50px;
+          background-color: rgba(251, 63, 89, 1);
+          color: #fff;
+          text-align: center;
+          border-radius: 2px;
+          font-size: 24px;
+          line-height: 50px;
+          font-family: "Arial Normal";
+          margin-top: 20px;
+        }
+        .notFocus{
+          width: 160px;
+          height: 50px;
+          background-color: #383b43;
+          color: #fff;
+          text-align: center;
+          border-radius: 2px;
+          font-size: 24px;
+          line-height: 50px;
+          font-family: "Arial Normal";
+          margin-top: 20px;
+        }
+      }
+            .bottom{
+        text-align: center;
+        font-size: 26px;
+        color: #999999;
+        padding-top: 100px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

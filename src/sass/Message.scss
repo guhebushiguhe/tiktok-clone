@@ -1,0 +1,379 @@
+.message {
+  background-color: #161823;
+  height: 100%;
+  overflow: auto;
+  font-family: "Arial Normal";
+  .messageTitle {
+    width: 100%;
+    height: 10vh;
+    color: #fff;
+    background-color: #161823;
+    position: fixed;
+    border-bottom: 1px solid #323232;
+    overflow: auto;
+    p {
+      font-weight: 600;
+      text-align: center;
+      line-height: 10vh;
+    }
+    b {
+      color: #cccccc;
+      position: absolute;
+      right: 30px;
+      top: 4vh;
+      font-size: 20px;
+    }
+  }
+  .container {
+    // position: relative;
+    margin-top: 10vh;
+    height: 90vh;
+    .messageNav {
+      height: 16vh;
+      border-top: 1px solid #323232;
+      border-bottom: 1px solid #323232;
+      ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        li {
+          width: 79px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          img {
+            width: 75px;
+            height: 75px;
+            border-radius: 5px;
+          }
+
+          p {
+            width: 80px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            margin-top: -60px;
+          }
+        }
+      }
+    }
+
+    .messageOfficial {
+      border-bottom: 1px solid #323232;
+      .messageOfficialLeft {
+        ul {
+          padding: 15px 0;
+          height: 28vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          .OfficialItem {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            img {
+              width: 88px;
+              height: 88px;
+              border-radius: 50%;
+            }
+
+            span {
+              width: 400px;
+              color: #fff;
+              font-size: 28px;
+              max-height: 99px;
+              padding-top: 15px;
+              p {
+                color: #cccccc;
+                font-size: 20px;
+              }
+            }
+            b {
+              font-weight: 400;
+              color: #cccccc;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .messageRecommend {
+      .Title {
+        margin: 35px 0;
+        margin-left: 20px;
+        color: #cccccc;
+        font-size: 30px;
+        font-family: "Arial Normal";
+        img {
+          margin-left: 5px;
+          // margin-top: ;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .messageRecommendList {
+        ul {
+          background-color: #161823;
+          display: flex;
+          flex-direction: column;
+          .messageRecommendListItem {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            div {
+              width: 88px;
+              height: 88px;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                // padding: 20px;
+              }
+            }
+
+            span {
+              margin-right: 20px;
+              color: #ffff;
+              width: 250px;
+              font-size: 28px;
+              padding-top: 15px;
+              p {
+                width: 300px;
+                color: #ccc;
+                font-size: 20px;
+                padding-top: 9px;
+                text-align: left;
+                // text-indent: 0px;
+                // margin-left: -100px;
+              }
+            }
+
+            .focusBtn {
+              width: 160px;
+              height: 50px;
+              color: #fff;
+              border-radius: 2px;
+              font-size: 24px;
+              line-height: 50px;
+              font-family: "Arial Normal";
+              margin-top: 30px;
+              text-align: center;
+              .Focus {
+                font-size: 24px;
+                width: 100%;
+                background-color: rgba(251, 63, 89, 1);
+                line-height: 50px;
+                height: 100%;
+              }
+              .notFocus {
+                font-size: 24px;
+                width: 100%;
+                background-color: #383b43;
+                height: 100%;
+              }
+            }
+
+            button {
+              width: 50px;
+              height: 50px;
+              border: none;
+              margin-top: 5px;
+              background-color: rgba(255, 255, 255, 0);
+              outline: none;
+              cursor: pointer;
+              margin-right: 10px;
+              img {
+                width: 50px;
+                height: 50px;
+                margin-top: 25px;
+              }
+            }
+          }
+
+          p {
+            text-align: center;
+            font-size: 26px;
+            color: #999999;
+            padding-top: 59px;
+            margin-bottom: 30px;
+          }
+          .router {
+            width: 100vw;
+            height: 100vh;
+            ul {
+              width: 1000px;
+              li {
+                width: 1000px;
+              }
+            }
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .aChat {
+      display: none;
+    }
+    .active {
+      display: block;
+      width: 100%;
+      background-color: #161823;
+      position: fixed;
+      left: 0;
+      z-index: 999;
+      height: 90vh;
+      top: 0;
+      transition: top 0.2s;
+      .aChatTitle {
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #161823;
+        height: 10vh;
+        border-bottom: 1px solid #323232;
+        button {
+          border: none;
+          background-color: rgba(255, 255, 255, 0);
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        p {
+          width: 500px;
+          text-align: center;
+          color: #ffffff;
+          line-height: 10vh;
+          font-size: 30px;
+        }
+
+        div {
+          width: 100px;
+          height: 32px;
+          line-height: 32px;
+          font-size: 30px;
+          color: #fb3f59;
+          line-height: 10vh;
+        }
+      }
+
+      .search {
+        height: 5vh;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+        color: #fff;
+        img {
+          // flex: 1;
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+        }
+
+        input {
+          width: 630px;
+          height: 40px;
+          margin: 10px 0;
+          margin-right: 30px;
+          border: none;
+          background-color: rgba(255, 255, 255, 0);
+        }
+      }
+
+      .group {
+        background-color: #161823;
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0 20px 0;
+        span {
+          color: #999999;
+          font-size: 25px;
+          flex: 6;
+          margin-left: 30px;
+        }
+
+        button {
+          width: 33px;
+          height: 33px;
+          border: none;
+          background-color: rgba(255, 255, 255, 0);
+          margin-right: 20px;
+          img {
+            width: 28px;
+            height: 28px;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li.goodFriendItem {
+          padding-top: 30px;
+          display: flex;
+          width: 100%;
+           margin: 25px 0;
+          input {
+      
+            border-radius: 50%;
+            background-color: red;
+          }
+
+          div {
+            width: 6000px;
+            display: flex;
+            img {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+            }
+
+            p {
+              width: 200px;
+              text-indent: 20px;
+              margin-top: 20px;
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+
+          .mycheck {
+            width: 1000px;
+            height: 30px;
+            position: relative;
+            margin-left: 40px;
+            input {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: none rgba(255, 255, 255, 0);
+              margin-top: 20px;
+            }
+
+            label {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              position: absolute;
+              top: 5px;
+              background-color: rgba(16, 15, 15, 0);
+              border: none;
+              color: #323232;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

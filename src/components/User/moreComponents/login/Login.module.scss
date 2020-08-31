@@ -1,0 +1,106 @@
+.loginBox{
+  width: 100%;
+  height: 100%;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  background:#fefefe;
+  padding:48px;
+  // overflow: hidden;
+  // zoom:100%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .close {
+      font-weight: 600;
+      font-size: 48px;
+      
+    }
+    span {
+      font-size: 32px;
+      font-weight: 600;
+    }
+  }
+
+  .avatar {
+    width:100%;
+    height: 500px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    .phone{
+      margin-top: 75px;
+      font-size: 48px;
+    }
+    .authentication{
+      color:#acacac;
+    }
+
+    span {
+      margin-top:20px;
+      font-size: 32px;
+    }
+  }
+
+  .SignIn {
+    text-align: center;
+     .btn{
+      width: 100%;
+      height: 100px;
+      background:#fd2a53;
+      line-height: 100px;
+      color: #fff;
+      border-radius:10px;
+      margin-bottom: 20px;
+    }
+     .btn1{
+      width: 100%;
+      height: 100px;
+      background:#fefefe;
+      line-height: 100px;
+      color: #000;
+      border:1px solid #ccc;
+      font-weight: 600;
+      border-radius:10px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 32px;
+      color: #adafae;
+      span {
+        font-size: 32px;
+        font-weight: 600;
+        color:#3481cf;
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom:48px;
+    text-align: center;
+    font-size: 32px;
+    span {
+      font-size: 32px;
+      font-weight: 600;
+      color:#3481cf;
+    }
+    .imgBigBox{
+      .thirdParty{
+        width: 77px;
+        height: 77px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.Show{
+  display: block;
+}
+.hidden{display: none;}
